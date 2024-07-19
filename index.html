@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- <p id="wel"></p>
+    <script src="./Program-2.js"></script> -->
+    <!-- <script>
+        document.getElementById('wel').innerHTML = 'Welcome';
+        document.getElementById('wel').style.fontFamily = 'consolas';
+        document.getElementById('wel').style.fontSize = '30px';
+        document.getElementById('wel').style.color = 'red';
+    </script> -->
+    <div class="section">
+        <form action="./cal.html" method="post" onsubmit="return validate()">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="city">City</label><br>
+            <input type="text" id="city" name="city"><br>
+            <label for="address">Address</label><br>
+            <textarea name="address" id="address" cols="25" rows="4"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const validate = () => {
+            let fname = document.getElementById('fname').value;
+            let lname = document.getElementById('lname').value;
+            let city = document.getElementById('city').value;
+            let address = document.getElementById('address').value;
+            console.log(fname)
+            if (lname=='' || fname=='' || city =='' || address=='') {
+                alert('Please Check all the fields are entered');
+                return false
+            } else{
+                alert("Welcome,", fname)
+            }
+        }
+    </script>
+</body>
+</html>
